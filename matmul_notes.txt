@@ -1,0 +1,75 @@
+
+---------- ENV SETUP ----------
+
+gcloud auth list
+
+
+gcloud compute instances create matmul-vm-c4standard2 \
+  --zone=us-central1-a \
+  --machine-type=c4-standard-2 \
+  --image-family=debian-12 \
+  --image-project=debian-cloud
+
+ERROR: (gcloud.compute.instances.create) Could not fetch resource:
+ - Invalid value for field 'resource.networkInterfaces[0].network': 'https://compute.googleapis.com/compute/v1/projects/flowing-outpost-435020-m7/global/networks/default'. The referenced network resource cannot be found.
+
+gcloud compute networks create default \ --subnet-mode=auto
+
+Created [https://www.googleapis.com/compute/v1/projects/flowing-outpost-435020-m7/global/networks/default].
+NAME     SUBNET_MODE  BGP_ROUTING_MODE  IPV4_RANGE  GATEWAY_IPV4
+default  AUTO         REGIONAL
+
+Instances on this network will not be reachable until firewall rules
+are created. As an example, you can allow all internal traffic between
+instances as well as SSH, RDP, and ICMP by running:
+
+gcloud compute networks list 
+           
+gcloud compute firewall-rules create allow-internal \
+  --network default \
+  --allow tcp,udp,icmp \
+  --source-ranges 10.0.0.0/8
+
+gcloud compute firewall-rules create allow-ssh-rdp-icmp \
+  --network default \
+  --allow tcp:22,tcp:3389,icmp \
+  --source-ranges 0.0.0.0/0
+
+gcloud compute firewall-rules create allow-http \
+  --network default \
+  --allow tcp:80 \
+  --source-ranges 0.0.0.0/0
+
+gcloud compute firewall-rules create allow-https \
+  --network default \
+  --allow tcp:443 \
+  --source-ranges 0.0.0.0/0
+
+gcloud compute instances create matmul-vm-c4standard2 \
+  --zone=us-central1-a \
+  --machine-type=c4-standard-2 \
+  --image-family=debian-12 \
+  --image-project=debian-cloud \
+  --network=default   
+
+gcloud compute instances describe matmul-vm-c4standard2 --zone=us-central1-a --format='get(networkInterfaces[0].accessConfigs[0].natIP)'
+
+gcloud compute ssh matmul-vm-c4standard2 --zone=us-central1-a
+
+sudo apt update
+
+sudo apt install -y build-essential pkg-config gfortran clang libomp-dev git libopenblas-dev \
+                    python3-numpy python3-scipy python3-pandas python3-matplotlib llvm google-perftools
+
+
+sudo sh ./l_dpcpp-cpp-compiler_p_2024.2.1.79_offline.sh -a --silent --cli --eula accept
+
+gcloud compute disks resize matmul-vm-c4standard2 --size=20GB --zone=us-central1-a
+
+df -h /
+
+gcloud compute instances start matmul-vm-c4standard2 --zone=us-central1-a
+
+
+gcloud compute instances stop matmul-vm-c4standard2 --zone=us-central1-a
+gcloud compute instances start matmul-vm-c4standard2 --zone=us-central1-a
