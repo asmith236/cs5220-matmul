@@ -1,0 +1,208 @@
+Global optimization report for : matrix_init
+
+LOOP BEGIN at matmul.c (66, 5)
+    remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+    remark #25439: Loop unrolled with remainder by 8
+LOOP END
+
+LOOP BEGIN at matmul.c (66, 5)
+<Remainder loop>
+    remark #25436: Loop completely unrolled by 1
+LOOP END
+=================================================================
+
+Global optimization report for : matrix_clear
+=================================================================
+
+Global optimization report for : diff_dgemm
+
+LOOP BEGIN at matmul.c (107, 5)
+    remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at matmul.c (108, 9)
+        remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at matmul.c (111, 13)
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15305: vectorization support: vector length 4
+        LOOP END
+
+        LOOP BEGIN at matmul.c (111, 13)
+        <Remainder loop for vectorization>
+        LOOP END
+    LOOP END
+LOOP END
+=================================================================
+
+Global optimization report for : validate_dgemm
+
+LOOP BEGIN at matmul.c (154, 5)
+    remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at matmul.c (155, 9)
+        remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at matmul.c (158, 13)
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15305: vectorization support: vector length 4
+        LOOP END
+
+        LOOP BEGIN at matmul.c (158, 13)
+        <Remainder loop for vectorization>
+        LOOP END
+    LOOP END
+LOOP END
+=================================================================
+
+Global optimization report for : time_dgemm
+
+LOOP BEGIN at matmul.c (191, 5)
+
+    LOOP BEGIN at matmul.c (194, 9)
+        remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+        remark #25439: Loop unrolled with remainder by 8
+    LOOP END
+
+    LOOP BEGIN at matmul.c (194, 9)
+    <Remainder loop>
+    LOOP END
+LOOP END
+=================================================================
+
+Global optimization report for : main
+
+LOOP BEGIN at matmul.c (218, 9)
+LOOP END
+
+LOOP BEGIN at matmul.c (66, 5)
+    remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+    remark #25439: Loop unrolled with remainder by 8
+LOOP END
+
+LOOP BEGIN at matmul.c (66, 5)
+<Remainder loop>
+    remark #25436: Loop completely unrolled by 1
+LOOP END
+
+LOOP BEGIN at matmul.c (66, 5)
+    remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+    remark #25439: Loop unrolled with remainder by 8
+LOOP END
+
+LOOP BEGIN at matmul.c (66, 5)
+<Remainder loop>
+    remark #25436: Loop completely unrolled by 1
+LOOP END
+
+LOOP BEGIN at matmul.c (248, 5)
+
+    LOOP BEGIN at matmul.c (191, 5)
+
+        LOOP BEGIN at matmul.c (194, 9)
+            remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+            remark #25439: Loop unrolled with remainder by 8
+        LOOP END
+
+        LOOP BEGIN at matmul.c (194, 9)
+        <Remainder loop>
+        LOOP END
+    LOOP END
+LOOP END
+=================================================================
+
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+DEAD STATIC FUNC: llvm.ssa.copy.f64
+
+DEAD STATIC FUNC: llvm.ssa.copy.i32
+
+DEAD STATIC FUNC: llvm.ssa.copy.i64
+
+COMPILE FUNC: diff_dgemm
+   -> DELETE: fputc matmul.c (120,9)
+   -> DELETE: fputc matmul.c (121,9)
+   -> DELETE: fputc matmul.c (122,9)
+   -> INLINE: matrix_clear matmul.c (105,5)
+      -> llvm.memset.p0.i64 matmul.c (76,5)
+   -> DELETE: fprintf matmul.c (116,13)
+   -> DELETE: fprintf matmul.c (117,13)
+   -> DELETE: fprintf matmul.c (118,13)
+   -> DELETE: llvm.vector.reduce.fadd.v4f64 matmul.c (113,25)
+   -> llvm.vector.reduce.fadd.v4f64 matmul.c (113,25)
+   -> DELETE: fprintf matmul.c (116,13)
+   -> DELETE: fprintf matmul.c (117,13)
+   -> DELETE: fprintf matmul.c (118,13)
+   -> DELETE: fputc matmul.c (120,9)
+   -> DELETE: fputc matmul.c (121,9)
+   -> DELETE: fputc matmul.c (122,9)
+   -> DELETE: llvm.ssa.copy.i64 matmul.c
+   -> DELETE: llvm.ssa.copy.i64 matmul.c (111,36)
+   -> DELETE: llvm.ssa.copy.i64 matmul.c
+   -> DELETE: llvm.ssa.copy.f64 matmul.c
+   -> DELETE: llvm.ssa.copy.i64 matmul.c (108,32)
+   -> DELETE: llvm.ssa.copy.i64 matmul.c (107,28)
+   -> llvm.masked.gather.v4f64.v4p0 matmul.c (112,31)
+
+COMPILE FUNC: matrix_init
+   -> DELETE: drand48 matmul.c (67,16)
+   -> DELETE: llvm.ssa.copy.i64 matmul.c (66,44)
+
+COMPILE FUNC: matrix_clear
+   -> llvm.memset.p0.i64 matmul.c (76,5)
+
+COMPILE FUNC: validate_dgemm
+   -> INLINE: matrix_clear matmul.c (151,5)
+      -> llvm.memset.p0.i64 matmul.c (76,5)
+   -> DELETE: llvm.fabs.f64 matmul.c (164,26)
+   -> DELETE: llvm.fabs.f64 matmul.c (161,31)
+   -> diff_dgemm matmul.c (171,17)
+   -> DELETE: llvm.fabs.v4f64 matmul.c (161,31)
+   -> llvm.fabs.v4f64 matmul.c (161,31)
+   -> DELETE: llvm.vector.reduce.fadd.v4f64 matmul.c (160,25)
+   -> llvm.vector.reduce.fadd.v4f64 matmul.c (160,25)
+   -> DELETE: llvm.vector.reduce.fadd.v4f64 matmul.c (161,28)
+   -> llvm.vector.reduce.fadd.v4f64 matmul.c (161,28)
+   -> DELETE: llvm.fabs.f64 matmul.c (161,31)
+   -> llvm.fabs.f64 matmul.c (161,31)
+   -> DELETE: llvm.fabs.f64 matmul.c (164,26)
+   -> llvm.fabs.f64 matmul.c (164,26)
+   -> DELETE: llvm.ssa.copy.i64 matmul.c
+   -> DELETE: llvm.ssa.copy.i64 matmul.c
+   -> DELETE: llvm.ssa.copy.i64 matmul.c
+   -> DELETE: llvm.ssa.copy.i64 matmul.c
+   -> DELETE: llvm.ssa.copy.f64 matmul.c
+   -> DELETE: llvm.ssa.copy.f64 matmul.c
+   -> DELETE: llvm.ssa.copy.i64 matmul.c (155,32)
+   -> DELETE: llvm.ssa.copy.i64 matmul.c (158,36)
+   -> DELETE: llvm.ssa.copy.i64 matmul.c (154,28)
+   -> llvm.masked.gather.v4f64.v4p0 matmul.c (159,31)
+
+COMPILE FUNC: time_dgemm
+   -> INLINE: matrix_clear matmul.c (192,9)
+      -> llvm.memset.p0.i64 matmul.c (76,5)
+   -> DELETE:  matmul.c (195,13)
+   -> DELETE: llvm.ssa.copy.i32 matmul.c (194,45)
+
+COMPILE FUNC: main
+   -> llvm.memcpy.p0.p0.i64 matmul.c (220,9)
+   -> llvm.memcpy.p0.p0.i64 matmul.c (222,9)
+   -> INLINE: matrix_init matmul.c (241,5)
+      -> DELETE: drand48 matmul.c (67,16)
+   -> INLINE: matrix_init matmul.c (242,5)
+      -> DELETE: drand48 matmul.c (67,16)
+   -> validate_dgemm matmul.c (250,9)
+   -> INLINE: time_dgemm matmul.c (251,36)
+      -> INLINE: matrix_clear matmul.c (192,9)
+         -> llvm.memset.p0.i64 matmul.c (76,5)
+      -> DELETE:  matmul.c (195,13)
+   -> DELETE: llvm.ssa.copy.i64 matmul.c (66,44)
+   -> DELETE: llvm.ssa.copy.i64 matmul.c
+   -> DELETE: llvm.ssa.copy.i64 matmul.c (66,44)
+   -> DELETE: llvm.ssa.copy.i32 matmul.c (194,45)
+
+---- End Inlining Report ------

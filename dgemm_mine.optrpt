@@ -1,0 +1,261 @@
+Global optimization report for : do_block
+
+LOOP BEGIN at dgemm_mine.c (25, 5)
+    remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+    remark #25439: Loop unrolled with remainder by 8
+LOOP END
+
+LOOP BEGIN at dgemm_mine.c (25, 5)
+<Remainder loop>
+LOOP END
+
+LOOP BEGIN at dgemm_mine.c (30, 5)
+    remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+    remark #25439: Loop unrolled with remainder by 8
+LOOP END
+
+LOOP BEGIN at dgemm_mine.c (30, 5)
+<Remainder loop>
+LOOP END
+
+LOOP BEGIN at dgemm_mine.c (35, 5)
+    remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at dgemm_mine.c (37, 9)
+        remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at dgemm_mine.c (40, 13)
+            remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed FLOW dependence between [ /home/aspensmith/matmul-project/dgemm_mine.c (45, 25) ] and [ /home/aspensmith/matmul-project/dgemm_mine.c (45, 25) ] 
+            remark #25439: Loop unrolled with remainder by 8
+        LOOP END
+
+        LOOP BEGIN at dgemm_mine.c (40, 13)
+        <Remainder loop>
+        LOOP END
+    LOOP END
+
+    LOOP BEGIN at dgemm_mine.c (53, 9)
+        remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at dgemm_mine.c (55, 13)
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15305: vectorization support: vector length 4
+        LOOP END
+
+        LOOP BEGIN at dgemm_mine.c (55, 13)
+        <Remainder loop for vectorization>
+        LOOP END
+    LOOP END
+LOOP END
+=================================================================
+
+Global optimization report for : square_dgemm
+
+LOOP BEGIN at dgemm_mine.c (67, 5)
+
+    LOOP BEGIN at dgemm_mine.c (69, 9)
+
+        LOOP BEGIN at dgemm_mine.c (71, 13)
+
+            LOOP BEGIN at dgemm_mine.c (25, 5)
+                remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+                remark #25439: Loop unrolled with remainder by 8
+            LOOP END
+
+            LOOP BEGIN at dgemm_mine.c (25, 5)
+            <Remainder loop>
+            LOOP END
+
+            LOOP BEGIN at dgemm_mine.c (30, 5)
+                remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+                remark #25439: Loop unrolled with remainder by 8
+            LOOP END
+
+            LOOP BEGIN at dgemm_mine.c (30, 5)
+            <Remainder loop>
+            LOOP END
+
+            LOOP BEGIN at dgemm_mine.c (35, 5)
+                remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+                LOOP BEGIN at dgemm_mine.c (37, 9)
+                    remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+                    LOOP BEGIN at dgemm_mine.c (40, 13)
+                        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+                        remark #15346: vector dependence: assumed FLOW dependence between [ /home/aspensmith/matmul-project/dgemm_mine.c (45, 25) ] and [ /home/aspensmith/matmul-project/dgemm_mine.c (45, 25) ] 
+                        remark #25439: Loop unrolled with remainder by 8
+                    LOOP END
+
+                    LOOP BEGIN at dgemm_mine.c (40, 13)
+                    <Remainder loop>
+                    LOOP END
+                LOOP END
+
+                LOOP BEGIN at dgemm_mine.c (53, 9)
+                    remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+                    LOOP BEGIN at dgemm_mine.c (55, 13)
+                        remark #15300: LOOP WAS VECTORIZED
+                        remark #15305: vectorization support: vector length 4
+                    LOOP END
+
+                    LOOP BEGIN at dgemm_mine.c (55, 13)
+                    <Remainder loop for vectorization>
+                    LOOP END
+                LOOP END
+            LOOP END
+        LOOP END
+    LOOP END
+LOOP END
+=================================================================
+
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+DEAD STATIC FUNC: _mm256_broadcast_sd
+
+DEAD STATIC FUNC: _mm256_fmadd_pd
+
+DEAD STATIC FUNC: _mm256_loadu_pd
+
+DEAD STATIC FUNC: _mm256_storeu_pd
+
+DEAD STATIC FUNC: llvm.ssa.copy.f64
+
+DEAD STATIC FUNC: llvm.ssa.copy.i32
+
+DEAD STATIC FUNC: llvm.ssa.copy.i64
+
+DEAD STATIC FUNC: llvm.ssa.copy.v4f64
+
+COMPILE FUNC: do_block
+   -> INLINE: _mm256_loadu_pd dgemm_mine.c (41,33)
+   -> INLINE: _mm256_loadu_pd dgemm_mine.c (38,29)
+   -> INLINE: _mm256_broadcast_sd dgemm_mine.c (42,33)
+   -> INLINE: _mm256_fmadd_pd dgemm_mine.c (45,25)
+      -> DELETE: llvm.fma.v4f64 dgemm_mine.c
+   -> INLINE: _mm256_storeu_pd dgemm_mine.c (49,13)
+   -> llvm.smin.i32 dgemm_mine.c (17,19)
+   -> llvm.smin.i32 dgemm_mine.c (18,19)
+   -> llvm.smin.i32 dgemm_mine.c (19,19)
+   -> DELETE: llvm.memcpy.p0.p0.i64 dgemm_mine.c (27,43)
+   -> DELETE: llvm.memcpy.p0.p0.i64 dgemm_mine.c (32,43)
+   -> DELETE: llvm.fma.v4f64 dgemm_mine.c (45,25)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (27,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (27,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (27,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (27,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (27,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (27,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (27,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (27,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (27,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (32,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (32,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (32,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (32,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (32,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (32,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (32,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (32,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (32,43)
+   -> llvm.fma.v4f64 dgemm_mine.c (45,25)
+   -> llvm.fma.v4f64 dgemm_mine.c (45,25)
+   -> llvm.fma.v4f64 dgemm_mine.c (45,25)
+   -> llvm.fma.v4f64 dgemm_mine.c (45,25)
+   -> llvm.fma.v4f64 dgemm_mine.c (45,25)
+   -> llvm.fma.v4f64 dgemm_mine.c (45,25)
+   -> llvm.fma.v4f64 dgemm_mine.c (45,25)
+   -> llvm.fma.v4f64 dgemm_mine.c (45,25)
+   -> llvm.fma.v4f64 dgemm_mine.c (45,25)
+   -> DELETE: llvm.vector.reduce.fadd.v4f64 dgemm_mine.c (56,21)
+   -> llvm.vector.reduce.fadd.v4f64 dgemm_mine.c (56,21)
+   -> DELETE: llvm.ssa.copy.i64 dgemm_mine.c (25,5)
+   -> DELETE: llvm.ssa.copy.i64 dgemm_mine.c (30,5)
+   -> DELETE: llvm.ssa.copy.i32 dgemm_mine.c
+   -> DELETE: llvm.ssa.copy.i64 dgemm_mine.c
+   -> DELETE: llvm.ssa.copy.i64 dgemm_mine.c
+   -> DELETE: llvm.ssa.copy.v4f64 dgemm_mine.c (38,29)
+   -> DELETE: llvm.ssa.copy.i64 dgemm_mine.c (40,40)
+   -> DELETE: llvm.ssa.copy.i64 dgemm_mine.c (37,38)
+   -> DELETE: llvm.ssa.copy.i32 dgemm_mine.c (35,5)
+   -> DELETE: llvm.ssa.copy.i64 dgemm_mine.c (53,9)
+   -> DELETE: llvm.ssa.copy.i64 dgemm_mine.c
+   -> DELETE: llvm.ssa.copy.f64 dgemm_mine.c (54,26)
+   -> DELETE: llvm.ssa.copy.i64 dgemm_mine.c (55,38)
+   -> DELETE: llvm.ssa.copy.i64 dgemm_mine.c (53,24)
+   -> DELETE: llvm.ssa.copy.i64 dgemm_mine.c (35,32)
+   -> llvm.masked.gather.v4f64.v4p0 dgemm_mine.c (56,24)
+
+COMPILE FUNC: square_dgemm
+   -> INLINE: do_block dgemm_mine.c (73,17)
+      -> INLINE: _mm256_loadu_pd dgemm_mine.c (41,33)
+      -> INLINE: _mm256_loadu_pd dgemm_mine.c (38,29)
+      -> INLINE: _mm256_broadcast_sd dgemm_mine.c (42,33)
+      -> INLINE: _mm256_fmadd_pd dgemm_mine.c (45,25)
+      -> INLINE: _mm256_storeu_pd dgemm_mine.c (49,13)
+      -> DELETE: llvm.smin.i32 dgemm_mine.c (17,19)
+      -> DELETE: llvm.smin.i32 dgemm_mine.c (18,19)
+      -> DELETE: llvm.smin.i32 dgemm_mine.c (19,19)
+      -> DELETE: llvm.memcpy.p0.p0.i64 dgemm_mine.c (27,43)
+      -> DELETE: llvm.memcpy.p0.p0.i64 dgemm_mine.c (32,43)
+      -> DELETE: llvm.fma.v4f64 dgemm_mine.c (45,25)
+   -> DELETE: llvm.memcpy.p0.p0.i64 dgemm_mine.c (27,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (27,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (27,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (27,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (27,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (27,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (27,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (27,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (27,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (27,43)
+   -> DELETE: llvm.memcpy.p0.p0.i64 dgemm_mine.c (32,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (32,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (32,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (32,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (32,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (32,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (32,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (32,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (32,43)
+   -> llvm.memcpy.p0.p0.i64 dgemm_mine.c (32,43)
+   -> DELETE: llvm.fma.v4f64 dgemm_mine.c (45,25)
+   -> llvm.fma.v4f64 dgemm_mine.c (45,25)
+   -> llvm.fma.v4f64 dgemm_mine.c (45,25)
+   -> llvm.fma.v4f64 dgemm_mine.c (45,25)
+   -> llvm.fma.v4f64 dgemm_mine.c (45,25)
+   -> llvm.fma.v4f64 dgemm_mine.c (45,25)
+   -> llvm.fma.v4f64 dgemm_mine.c (45,25)
+   -> llvm.fma.v4f64 dgemm_mine.c (45,25)
+   -> llvm.fma.v4f64 dgemm_mine.c (45,25)
+   -> llvm.fma.v4f64 dgemm_mine.c (45,25)
+   -> DELETE: llvm.vector.reduce.fadd.v4f64 dgemm_mine.c (56,21)
+   -> llvm.vector.reduce.fadd.v4f64 dgemm_mine.c (56,21)
+   -> DELETE: llvm.ssa.copy.i64 dgemm_mine.c (25,5)
+   -> DELETE: llvm.ssa.copy.i64 dgemm_mine.c (30,5)
+   -> DELETE: llvm.ssa.copy.i32 dgemm_mine.c
+   -> DELETE: llvm.ssa.copy.i64 dgemm_mine.c
+   -> DELETE: llvm.ssa.copy.v4f64 dgemm_mine.c (38,29)
+   -> DELETE: llvm.ssa.copy.i64 dgemm_mine.c (40,40)
+   -> DELETE: llvm.ssa.copy.i64 dgemm_mine.c (37,38)
+   -> DELETE: llvm.ssa.copy.i32 dgemm_mine.c (35,5)
+   -> DELETE: llvm.ssa.copy.i64 dgemm_mine.c (53,9)
+   -> DELETE: llvm.ssa.copy.i64 dgemm_mine.c
+   -> DELETE: llvm.ssa.copy.f64 dgemm_mine.c (54,26)
+   -> DELETE: llvm.ssa.copy.i64 dgemm_mine.c (55,38)
+   -> DELETE: llvm.ssa.copy.i64 dgemm_mine.c (53,24)
+   -> DELETE: llvm.ssa.copy.i64 dgemm_mine.c (35,32)
+   -> DELETE: llvm.ssa.copy.i64 dgemm_mine.c
+   -> llvm.smin.i32 dgemm_mine.c (18,19)
+   -> llvm.smin.i32 dgemm_mine.c (19,19)
+   -> llvm.smin.i32 dgemm_mine.c (17,19)
+   -> llvm.masked.gather.v4f64.v4p0 dgemm_mine.c (56,24)
+
+---- End Inlining Report ------

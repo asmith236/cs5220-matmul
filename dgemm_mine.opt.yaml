@@ -1,0 +1,4236 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: dgemm_mine.c, Line: 41, Column: 33 }
+Function:        do_block
+Args:
+  - String:          ''''
+  - Callee:          _mm256_loadu_pd
+  - String:          ''' inlined into '''
+  - Caller:          do_block
+    DebugLoc:        { File: dgemm_mine.c, Line: 16, Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost=always)'
+  - String:          ': '
+  - Reason:          always inline attribute
+  - String:          ' at callsite '
+  - String:          do_block
+  - String:          ':'
+  - Line:            '27'
+  - String:          ':'
+  - Column:          '33'
+  - String:          ';'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 29 }
+Function:        do_block
+Args:
+  - String:          ''''
+  - Callee:          _mm256_loadu_pd
+  - String:          ''' inlined into '''
+  - Caller:          do_block
+    DebugLoc:        { File: dgemm_mine.c, Line: 16, Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost=always)'
+  - String:          ': '
+  - Reason:          always inline attribute
+  - String:          ' at callsite '
+  - String:          do_block
+  - String:          ':'
+  - Line:            '24'
+  - String:          ':'
+  - Column:          '29'
+  - String:          ';'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        do_block
+Args:
+  - String:          ''''
+  - Callee:          _mm256_broadcast_sd
+  - String:          ''' inlined into '''
+  - Caller:          do_block
+    DebugLoc:        { File: dgemm_mine.c, Line: 16, Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost=always)'
+  - String:          ': '
+  - Reason:          always inline attribute
+  - String:          ' at callsite '
+  - String:          do_block
+  - String:          ':'
+  - Line:            '28'
+  - String:          ':'
+  - Column:          '33'
+  - String:          ';'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: dgemm_mine.c, Line: 45, Column: 25 }
+Function:        do_block
+Args:
+  - String:          ''''
+  - Callee:          _mm256_fmadd_pd
+  - String:          ''' inlined into '''
+  - Caller:          do_block
+    DebugLoc:        { File: dgemm_mine.c, Line: 16, Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost=always)'
+  - String:          ': '
+  - Reason:          always inline attribute
+  - String:          ' at callsite '
+  - String:          do_block
+  - String:          ':'
+  - Line:            '31'
+  - String:          ':'
+  - Column:          '25'
+  - String:          ';'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: dgemm_mine.c, Line: 49, Column: 13 }
+Function:        do_block
+Args:
+  - String:          ''''
+  - Callee:          _mm256_storeu_pd
+  - String:          ''' inlined into '''
+  - Caller:          do_block
+    DebugLoc:        { File: dgemm_mine.c, Line: 16, Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost=always)'
+  - String:          ': '
+  - Reason:          always inline attribute
+  - String:          ' at callsite '
+  - String:          do_block
+  - String:          ':'
+  - Line:            '35'
+  - String:          ':'
+  - Column:          '13'
+  - String:          ';'
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 50 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 56 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 56 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 24 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 26, Column: 29 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 26, Column: 29 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 56 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 56 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 24 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 31, Column: 29 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 31, Column: 29 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 65 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 65 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 30 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 51 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 51 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 57 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 57 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 40, Column: 33 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 40, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 65 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 65 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 67 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 67 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 54, Column: 31 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: dgemm_mine.c, Line: 54, Column: 31 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 54, Column: 37 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 54, Column: 37 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 33 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 67 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 67 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 30 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 25 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 25 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 40, Column: 33 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 40, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 33 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 33 }
+...
+--- !Passed
+Pass:            loop-delete
+Name:            Invariant
+DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 5 }
+Function:        do_block
+Args:
+  - String:          Loop deleted because it is invariant
+...
+--- !Passed
+Pass:            loop-idiom
+Name:            ProcessLoopStoreOfLoopLoad
+DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 43 }
+Function:        do_block
+Args:
+  - String:          'Formed a call to '
+  - NewFunction:     llvm.memcpy.p0.p0.i64
+  - String:          '() intrinsic from '
+  - Inst:            load and store
+  - String:          ' instruction in '
+  - Function:        do_block
+    DebugLoc:        { File: dgemm_mine.c, Line: 16, Column: 0 }
+  - String:          ' function'
+  - FromBlock:       ''
+  - ToBlock:         ''
+...
+--- !Passed
+Pass:            loop-delete
+Name:            Invariant
+DebugLoc:        { File: dgemm_mine.c, Line: 26, Column: 9 }
+Function:        do_block
+Args:
+  - String:          Loop deleted because it is invariant
+...
+--- !Passed
+Pass:            loop-delete
+Name:            Invariant
+DebugLoc:        { File: dgemm_mine.c, Line: 30, Column: 5 }
+Function:        do_block
+Args:
+  - String:          Loop deleted because it is invariant
+...
+--- !Passed
+Pass:            loop-idiom
+Name:            ProcessLoopStoreOfLoopLoad
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 43 }
+Function:        do_block
+Args:
+  - String:          'Formed a call to '
+  - NewFunction:     llvm.memcpy.p0.p0.i64
+  - String:          '() intrinsic from '
+  - Inst:            load and store
+  - String:          ' instruction in '
+  - Function:        do_block
+    DebugLoc:        { File: dgemm_mine.c, Line: 16, Column: 0 }
+  - String:          ' function'
+  - FromBlock:       ''
+  - ToBlock:         ''
+...
+--- !Passed
+Pass:            loop-delete
+Name:            Invariant
+DebugLoc:        { File: dgemm_mine.c, Line: 31, Column: 9 }
+Function:        do_block
+Args:
+  - String:          Loop deleted because it is invariant
+...
+--- !Passed
+Pass:            loop-delete
+Name:            Invariant
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        do_block
+Args:
+  - String:          Loop deleted because it is invariant
+...
+--- !Passed
+Pass:            loop-delete
+Name:            Invariant
+DebugLoc:        { File: dgemm_mine.c, Line: 53, Column: 9 }
+Function:        do_block
+Args:
+  - String:          Loop deleted because it is invariant
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 40, Column: 33 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            zext
+    DebugLoc:        { File: dgemm_mine.c, Line: 40, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 33 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            zext
+    DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 40, Column: 33 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            zext
+    DebugLoc:        { File: dgemm_mine.c, Line: 40, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 53, Column: 19 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            sext
+    DebugLoc:        { File: dgemm_mine.c, Line: 53, Column: 19 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 33 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            zext
+    DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 33 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: dgemm_mine.c, Line: 73, Column: 17 }
+Function:        square_dgemm
+Args:
+  - String:          ''''
+  - Callee:          do_block
+    DebugLoc:        { File: dgemm_mine.c, Line: 16, Column: 0 }
+  - String:          ''' inlined into '''
+  - Caller:          square_dgemm
+    DebugLoc:        { File: dgemm_mine.c, Line: 64, Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '440'
+  - String:          ', threshold='
+  - Threshold:       '525'
+  - String:          ')'
+  - String:          ' at callsite '
+  - String:          square_dgemm
+  - String:          ':'
+  - Line:            '10'
+  - String:          ':'
+  - Column:          '17'
+  - String:          ';'
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 68 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 68 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 54, Column: 48 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: dgemm_mine.c, Line: 54, Column: 48 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 18, Column: 19 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            sub
+    DebugLoc:        { File: dgemm_mine.c, Line: 18, Column: 19 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 18, Column: 19 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            call
+    DebugLoc:        { File: dgemm_mine.c, Line: 18, Column: 19 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 19, Column: 19 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            sub
+    DebugLoc:        { File: dgemm_mine.c, Line: 19, Column: 19 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 19, Column: 19 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            call
+    DebugLoc:        { File: dgemm_mine.c, Line: 19, Column: 19 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 25 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 25 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 25 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            zext
+    DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 25 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 30, Column: 5 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            shl
+    DebugLoc:        { File: dgemm_mine.c, Line: 30, Column: 5 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 30, Column: 5 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            zext
+    DebugLoc:        { File: dgemm_mine.c, Line: 30, Column: 5 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 30, Column: 25 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            zext
+    DebugLoc:        { File: dgemm_mine.c, Line: 30, Column: 25 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 35, Column: 5 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            zext
+    DebugLoc:        { File: dgemm_mine.c, Line: 35, Column: 5 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 35, Column: 5 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            sext
+    DebugLoc:        { File: dgemm_mine.c, Line: 35, Column: 5 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 35, Column: 25 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            zext
+    DebugLoc:        { File: dgemm_mine.c, Line: 35, Column: 25 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 40, Column: 33 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            zext
+    DebugLoc:        { File: dgemm_mine.c, Line: 40, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 71, Column: 29 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 71, Column: 29 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 18, Column: 19 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            sub
+    DebugLoc:        { File: dgemm_mine.c, Line: 18, Column: 19 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 18, Column: 19 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            call
+    DebugLoc:        { File: dgemm_mine.c, Line: 18, Column: 19 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 30, Column: 25 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            zext
+    DebugLoc:        { File: dgemm_mine.c, Line: 30, Column: 25 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 35, Column: 5 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            zext
+    DebugLoc:        { File: dgemm_mine.c, Line: 35, Column: 5 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 35, Column: 5 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            sext
+    DebugLoc:        { File: dgemm_mine.c, Line: 35, Column: 5 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 35, Column: 25 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            zext
+    DebugLoc:        { File: dgemm_mine.c, Line: 35, Column: 25 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 69, Column: 25 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 69, Column: 25 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 35, Column: 5 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            sext
+    DebugLoc:        { File: dgemm_mine.c, Line: 35, Column: 5 }
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 56 }
+Function:        do_block
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 54, Column: 26 }
+Function:        do_block
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 53, Column: 19 }
+Function:        do_block
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        do_block
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 46 }
+Function:        do_block
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 46 }
+Function:        do_block
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        do_block
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        do_block
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        do_block
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        do_block
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        do_block
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        do_block
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        do_block
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        do_block
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 43 }
+Function:        do_block
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Passed
+Pass:            slp-vectorizer
+Name:            VectorizedList
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 43 }
+Function:        do_block
+Args:
+  - String:          'SLP vectorized with cost '
+  - Cost:            '-1'
+  - String:          ' and with tree size '
+  - TreeSize:        '8'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 43 }
+Function:        do_block
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Passed
+Pass:            slp-vectorizer
+Name:            VectorizedList
+DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 43 }
+Function:        do_block
+Args:
+  - String:          'SLP vectorized with cost '
+  - Cost:            '-1'
+  - String:          ' and with tree size '
+  - TreeSize:        '8'
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 46 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 46 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 46 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 46 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            and
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 56 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 56 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 56 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 56 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 54, Column: 26 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: dgemm_mine.c, Line: 54, Column: 26 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 54, Column: 26 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: dgemm_mine.c, Line: 54, Column: 26 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 54, Column: 26 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 54, Column: 26 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 5 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            and
+    DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 5 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 13 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 56 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 56 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 13 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 56 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 56 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 25 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 25 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 25 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 25 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 46 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 46 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            and
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 5 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            and
+    DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 5 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 13 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 13 }
+Function:        do_block
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 13 }
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 56 }
+Function:        square_dgemm
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 54, Column: 26 }
+Function:        square_dgemm
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 53, Column: 19 }
+Function:        square_dgemm
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        square_dgemm
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 46 }
+Function:        square_dgemm
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 46 }
+Function:        square_dgemm
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        square_dgemm
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        square_dgemm
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        square_dgemm
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        square_dgemm
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        square_dgemm
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        square_dgemm
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        square_dgemm
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        square_dgemm
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 43 }
+Function:        square_dgemm
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Passed
+Pass:            slp-vectorizer
+Name:            VectorizedList
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 43 }
+Function:        square_dgemm
+Args:
+  - String:          'SLP vectorized with cost '
+  - Cost:            '-2'
+  - String:          ' and with tree size '
+  - TreeSize:        '8'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 43 }
+Function:        square_dgemm
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Passed
+Pass:            slp-vectorizer
+Name:            VectorizedList
+DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 43 }
+Function:        square_dgemm
+Args:
+  - String:          'SLP vectorized with cost '
+  - Cost:            '-2'
+  - String:          ' and with tree size '
+  - TreeSize:        '8'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: dgemm_mine.c, Line: 65, Column: 44 }
+Function:        square_dgemm
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 46 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 46 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 46 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 46 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            and
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 42, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 56 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 56 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 56 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 56 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 54, Column: 26 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: dgemm_mine.c, Line: 54, Column: 26 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 54, Column: 26 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: dgemm_mine.c, Line: 54, Column: 26 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 54, Column: 26 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 54, Column: 26 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 67, Column: 5 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            and
+    DebugLoc:        { File: dgemm_mine.c, Line: 67, Column: 5 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 13 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 56 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 56 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 13 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 56 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 56 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 25 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 25 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 25 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 25 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 46 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 46 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            and
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 67, Column: 5 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            and
+    DebugLoc:        { File: dgemm_mine.c, Line: 67, Column: 5 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 13 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 13 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 67, Column: 5 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            lshr
+    DebugLoc:        { File: dgemm_mine.c, Line: 67, Column: 5 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            shl
+    DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            shl
+    DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            and
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 67, Column: 5 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            lshr
+    DebugLoc:        { File: dgemm_mine.c, Line: 67, Column: 5 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            trunc
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            shl
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            shl
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            shl
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            and
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            trunc
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            shl
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 25 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 25 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 67, Column: 5 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            lshr
+    DebugLoc:        { File: dgemm_mine.c, Line: 67, Column: 5 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 25 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 25 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            and
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 67, Column: 5 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            and
+    DebugLoc:        { File: dgemm_mine.c, Line: 67, Column: 5 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 13 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 13 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            insertelement
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            shufflevector
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            shl
+    DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            shl
+    DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 67, Column: 5 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            lshr
+    DebugLoc:        { File: dgemm_mine.c, Line: 67, Column: 5 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            trunc
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            shl
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            shl
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            and
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            trunc
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            insertelement
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            shufflevector
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            shl
+    DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            shl
+    DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            shl
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            shl
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'hoisting '
+  - Inst:            mul
+    DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        do_block
+Args:
+  - NumReloads:      '1'
+  - String:          ' reloads '
+  - TotalReloadsCost: '2.000000e+02'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '2'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '4.000000e+02'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '3'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '4.000000e+02'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: dgemm_mine.c, Line: 53, Column: 9 }
+Function:        do_block
+Args:
+  - NumFoldedReloads: '1'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '2.600000e+02'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '5'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '1.105000e+03'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: dgemm_mine.c, Line: 35, Column: 5 }
+Function:        do_block
+Args:
+  - NumSpills:       '2'
+  - String:          ' spills '
+  - TotalSpillsCost: '2.812500e+01'
+  - String:          ' total spills cost '
+  - NumReloads:      '10'
+  - String:          ' reloads '
+  - TotalReloadsCost: '3.012500e+02'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '10'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '7.390625e+02'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '10'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '1.533125e+03'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: dgemm_mine.c, Line: 30, Column: 5 }
+Function:        do_block
+Args:
+  - NumReloads:      '1'
+  - String:          ' reloads '
+  - TotalReloadsCost: '6.250000e+00'
+  - String:          ' total reloads cost '
+  - NumVRCopies:     '1'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '6.250000e+00'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: dgemm_mine.c, Line: 30, Column: 5 }
+Function:        do_block
+Args:
+  - NumSpills:       '8'
+  - String:          ' spills '
+  - TotalSpillsCost: '5.000000e+01'
+  - String:          ' total spills cost '
+  - NumReloads:      '12'
+  - String:          ' reloads '
+  - TotalReloadsCost: '7.500000e+01'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '2'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.250000e+01'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '8'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '5.000000e+01'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 5 }
+Function:        do_block
+Args:
+  - NumFoldedReloads: '1'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '6.250000e+00'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '2'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '1.250000e+01'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 5 }
+Function:        do_block
+Args:
+  - NumSpills:       '8'
+  - String:          ' spills '
+  - TotalSpillsCost: '5.000000e+01'
+  - String:          ' total spills cost '
+  - NumReloads:      '12'
+  - String:          ' reloads '
+  - TotalReloadsCost: '7.500000e+01'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '2'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.250000e+01'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '8'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '5.000000e+01'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            SpillReloadCopies
+DebugLoc:        { File: dgemm_mine.c, Line: 14, Column: 1 }
+Function:        do_block
+Args:
+  - NumSpills:       '52'
+  - String:          ' spills '
+  - TotalSpillsCost: '1.454453e+02'
+  - String:          ' total spills cost '
+  - NumReloads:      '60'
+  - String:          ' reloads '
+  - TotalReloadsCost: '4.633984e+02'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '20'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '7.719141e+02'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '50'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '1.662320e+03'
+  - String:          ' total copies cost '
+  - String:          generated in function
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: dgemm_mine.c, Line: 16, Column: 0 }
+Function:        do_block
+Args:
+  - NumStackBytes:   '25864'
+  - String:          ' stack bytes in function '''
+  - Function:        do_block
+  - String:          ''''
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '31'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '7'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 5 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '30'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 43 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '74'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '14'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 43 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '9'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 30, Column: 25 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 30, Column: 25 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 35, Column: 25 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 30, Column: 25 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 30, Column: 25 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '31'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 43 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '74'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '6'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '6'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '16'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 43 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '9'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '41'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '9'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 25 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '7'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 49, Column: 13 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '7'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 46 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '6'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 41, Column: 33 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '20'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 41, Column: 33 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '7'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 53, Column: 19 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 53, Column: 9 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 53, Column: 9 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '13'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '8'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 54, Column: 26 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '6'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 24 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '10'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 21 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '9'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 13 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 56 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '7'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 61, Column: 1 }
+Function:        do_block
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '9'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: dgemm_mine.c, Line: 16, Column: 0 }
+Function:        do_block
+Args:
+  - NumInstructions: '518'
+  - String:          ' instructions in function'
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 5 }
+Function:        square_dgemm
+Args:
+  - NumSpills:       '5'
+  - String:          ' spills '
+  - TotalSpillsCost: '6.400000e+05'
+  - String:          ' total spills cost '
+  - NumReloads:      '17'
+  - String:          ' reloads '
+  - TotalReloadsCost: '2.176000e+06'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '5'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '6.400000e+05'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '8'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '1.024000e+06'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 5 }
+Function:        square_dgemm
+Args:
+  - NumReloads:      '2'
+  - String:          ' reloads '
+  - TotalReloadsCost: '2.560000e+05'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '1'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.280000e+05'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '1'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '1.280000e+05'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: dgemm_mine.c, Line: 30, Column: 5 }
+Function:        square_dgemm
+Args:
+  - NumSpills:       '5'
+  - String:          ' spills '
+  - TotalSpillsCost: '6.400000e+05'
+  - String:          ' total spills cost '
+  - NumReloads:      '15'
+  - String:          ' reloads '
+  - TotalReloadsCost: '1.920000e+06'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '5'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '6.400000e+05'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '8'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '1.024000e+06'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: dgemm_mine.c, Line: 30, Column: 5 }
+Function:        square_dgemm
+Args:
+  - NumReloads:      '2'
+  - String:          ' reloads '
+  - TotalReloadsCost: '2.560000e+05'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '1'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.280000e+05'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '1'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '1.280000e+05'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        square_dgemm
+Args:
+  - NumReloads:      '2'
+  - String:          ' reloads '
+  - TotalReloadsCost: '4.096000e+06'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '3'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.228800e+07'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '3'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '8.192000e+06'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: dgemm_mine.c, Line: 53, Column: 9 }
+Function:        square_dgemm
+Args:
+  - NumReloads:      '1'
+  - String:          ' reloads '
+  - TotalReloadsCost: '5.324800e+06'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '1'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '3.328000e+06'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '3'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '1.198080e+07'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: dgemm_mine.c, Line: 35, Column: 5 }
+Function:        square_dgemm
+Args:
+  - NumSpills:       '1'
+  - String:          ' spills '
+  - TotalSpillsCost: '4.096000e+05'
+  - String:          ' total spills cost '
+  - NumReloads:      '11'
+  - String:          ' reloads '
+  - TotalReloadsCost: '1.136640e+07'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '12'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.744000e+07'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '8'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '2.074880e+07'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: dgemm_mine.c, Line: 71, Column: 13 }
+Function:        square_dgemm
+Args:
+  - NumSpills:       '22'
+  - String:          ' spills '
+  - TotalSpillsCost: '1.843520e+06'
+  - String:          ' total spills cost '
+  - NumFoldedSpills: '1'
+  - String:          ' folded spills '
+  - TotalFoldedSpillsCost: '2.048000e+04'
+  - String:          ' total folded spills cost '
+  - NumReloads:      '70'
+  - String:          ' reloads '
+  - TotalReloadsCost: '1.619232e+07'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '33'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.906944e+07'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '31'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '2.310688e+07'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: dgemm_mine.c, Line: 69, Column: 9 }
+Function:        square_dgemm
+Args:
+  - NumSpills:       '38'
+  - String:          ' spills '
+  - TotalSpillsCost: '1.853760e+06'
+  - String:          ' total spills cost '
+  - NumFoldedSpills: '2'
+  - String:          ' folded spills '
+  - TotalFoldedSpillsCost: '2.112000e+04'
+  - String:          ' total folded spills cost '
+  - NumReloads:      '75'
+  - String:          ' reloads '
+  - TotalReloadsCost: '1.619552e+07'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '35'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.907072e+07'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '39'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '2.311200e+07'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: dgemm_mine.c, Line: 67, Column: 5 }
+Function:        square_dgemm
+Args:
+  - NumSpills:       '51'
+  - String:          ' spills '
+  - TotalSpillsCost: '1.854020e+06'
+  - String:          ' total spills cost '
+  - NumFoldedSpills: '2'
+  - String:          ' folded spills '
+  - TotalFoldedSpillsCost: '2.112000e+04'
+  - String:          ' total folded spills cost '
+  - NumReloads:      '79'
+  - String:          ' reloads '
+  - TotalReloadsCost: '1.619560e+07'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '38'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.907078e+07'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '46'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '2.311214e+07'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            SpillReloadCopies
+DebugLoc:        { File: dgemm_mine.c, Line: 63, Column: 1 }
+Function:        square_dgemm
+Args:
+  - NumSpills:       '63'
+  - String:          ' spills '
+  - TotalSpillsCost: '1.854029e+06'
+  - String:          ' total spills cost '
+  - NumFoldedSpills: '2'
+  - String:          ' folded spills '
+  - TotalFoldedSpillsCost: '2.112000e+04'
+  - String:          ' total folded spills cost '
+  - NumReloads:      '79'
+  - String:          ' reloads '
+  - TotalReloadsCost: '1.619560e+07'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '39'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.907078e+07'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '48'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '2.311214e+07'
+  - String:          ' total copies cost '
+  - String:          generated in function
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: dgemm_mine.c, Line: 64, Column: 0 }
+Function:        square_dgemm
+Args:
+  - NumStackBytes:   '26056'
+  - String:          ' stack bytes in function '''
+  - Function:        square_dgemm
+  - String:          ''''
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '24'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 50 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '21'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '9'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 68, Column: 26 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '44'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '14'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 70, Column: 30 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '51'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '10'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 72, Column: 34 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '12'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 26, Column: 29 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '7'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 43 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '77'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '6'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 27, Column: 43 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '11'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 43 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '76'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 32, Column: 43 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '12'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '25'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '7'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 25, Column: 25 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '6'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 49, Column: 13 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '7'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 38, Column: 46 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 41, Column: 33 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '20'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 37, Column: 9 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 41, Column: 33 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '7'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 53, Column: 19 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 53, Column: 9 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 53, Column: 9 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '12'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '8'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 54, Column: 26 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 24 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '10'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 21 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '9'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 55, Column: 13 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 56, Column: 56 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '7'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: dgemm_mine.c, Line: 77, Column: 1 }
+Function:        square_dgemm
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '9'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: dgemm_mine.c, Line: 64, Column: 0 }
+Function:        square_dgemm
+Args:
+  - NumInstructions: '568'
+  - String:          ' instructions in function'
+...
